@@ -1,4 +1,4 @@
-name := "Recipies_New_Play_Version"
+name := "Scala-CRUDS-Project"
  
 version := "1.0" 
       

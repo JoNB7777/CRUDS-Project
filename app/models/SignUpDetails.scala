@@ -21,7 +21,15 @@ object SignUpDetails {
 
   def checkIfValidDetails(userDetails: SignUpDetails): Boolean = userDetails.password == userDetails.confirmedPassword
 
-  def checkUserDoesNotExist(userDetails: SignUpDetails): Boolean = !(LoginDetails.userList.contains(LoginDetails(userDetails.username, userDetails.password)))
+  def checkUserDoesNotExist(userDetails: SignUpDetails): Boolean = {
+    var userDoesNotExist = true
+    for (i <- 0 until LoginDetails.userList.length) {
+      if (LoginDetails.userList(i).username == userDetails.username) {
+        userDoesNotExist = false
+      }
+    }
+    userDoesNotExist
+  }
 
   def addUser(username: String, password: String): ListBuffer[LoginDetails] = LoginDetails.userList += LoginDetails(username, password)
 }

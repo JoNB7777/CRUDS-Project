@@ -10,3 +10,9 @@ POST        /createFromJson              controllers.ApplicationUsingJsonReaders
 GET         /findByName/:lastName        controllers.ApplicationUsingJsonReadersWriters.findByName(lastName: String)
 
 GET         /assets/*file                controllers.Assets.at(path="/public", file)
+
+PUT       /updateAge                   controllers.ApplicationUsingJsonReadersWriters.updateAge
+
+PUT        /updateFirstName             controllers.ApplicationUsingJsonReadersWriters.updateFirstName
+
+PUT        /updateSurname               controllers.ApplicationUsingJsonReadersWriters.updateSurname

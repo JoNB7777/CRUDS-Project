@@ -58,21 +58,21 @@ class ApplicationUsingJsonReadersWriters @Inject()(
     }
   }
 
-  def updateFirstName(firstName: String, user: User): Action[AnyContent] = Action {
-    val updatedUser = User(user.age, firstName, user.lastName, user.feeds)
-    Ok(updatedUser)
-  }
-
-  def updateSurname(surname: String, user: User): Action[AnyContent] = Action {
-    val updatedUser = User(user.age, user.firstName, surname, user.feeds)
-    Ok(updatedUser)
-  }
-
-  def updateAge(age: Int, user: User): Action[AnyContent] = Action {
-    val updatedUser = User(age, user.firstName, user.lastName, user.feeds)
-    Ok(updatedUser)
-  }
-
+//  def updateFirstName(firstName: String, user: User): Action[AnyContent] = Action {
+//    val updatedUser = User(user.age, firstName, user.lastName, user.feeds)
+//    Ok(updatedUser)
+//  }
+//
+//  def updateSurname(surname: String, user: User): Action[AnyContent] = Action {
+//    val updatedUser = User(user.age, user.firstName, surname, user.feeds)
+//    Ok(updatedUser)
+//  }
+//
+//  def updateAge(age: Int, user: User): Action[AnyContent] = Action {
+//    val updatedUser = User(age, user.firstName, user.lastName, user.feeds)
+//    Ok(updatedUser)
+//  }
+//
   def delete = TODO
 
 

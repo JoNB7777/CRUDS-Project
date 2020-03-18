@@ -11,8 +11,8 @@ GET         /findByName/:lastName        controllers.ApplicationUsingJsonReaders
 
 GET         /assets/*file                controllers.Assets.at(path="/public", file)
 
-PUT       /updateAge                   controllers.ApplicationUsingJsonReadersWriters.updateAge
-
-PUT        /updateFirstName             controllers.ApplicationUsingJsonReadersWriters.updateFirstName
-
-PUT        /updateSurname               controllers.ApplicationUsingJsonReadersWriters.updateSurname
+#PUT       /updateAge                   controllers.ApplicationUsingJsonReadersWriters.updateAge
+#
+#PUT        /updateFirstName             controllers.ApplicationUsingJsonReadersWriters.updateFirstName
+#
+#PUT        /updateSurname               controllers.ApplicationUsingJsonReadersWriters.updateSurname

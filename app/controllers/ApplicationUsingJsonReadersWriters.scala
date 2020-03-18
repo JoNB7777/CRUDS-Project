@@ -60,7 +60,8 @@ class ApplicationUsingJsonReadersWriters @Inject()(
 
 //  def updateFirstName(firstName: String, user: User): Action[AnyContent] = Action {
 //    val updatedUser = User(user.age, firstName, user.lastName, user.feeds)
-//    Ok(updatedUser)
+//    val futureResult = collection.flatMap(_.update(user).one(updatedUser))
+//    futureResult.map(_ => Ok(updatedUser))
 //  }
 //
 //  def updateSurname(surname: String, user: User): Action[AnyContent] = Action {
@@ -72,8 +73,8 @@ class ApplicationUsingJsonReadersWriters @Inject()(
 //    val updatedUser = User(age, user.firstName, user.lastName, user.feeds)
 //    Ok(updatedUser)
 //  }
-//
-  def delete = TODO
+
+  def deleteUser(firstName: String) = TODO
 
 
 

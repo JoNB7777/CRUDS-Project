@@ -3,7 +3,9 @@ package models
 import play.api.data.Form
 import play.api.data.Forms._
 
-case class SignUpDetails(firstName: String, surname: String, username: String, password: String)
+import scala.collection.mutable.ListBuffer
+
+case class SignUpDetails(firstName: String, surname: String, username: String, password: String, confirmedPassword: String)
 
 object SignUpDetails {
 
@@ -17,7 +19,9 @@ object SignUpDetails {
     ) (SignUpDetails.apply)(SignUpDetails.unapply)
   )
 
-  def checkIfValidDetails(userDetails: SignUpDetails): Boolean = "enterPassword" == "confirmPassword"
+  def checkIfValidDetails(userDetails: SignUpDetails): Boolean = userDetails.password == userDetails.confirmedPassword
 
-  def addUser(userName: String, password: String) = LoginDetails.userList = LoginDetails.userList + LoginDetails(userName, password)
+  def checkUserDoesNotExist(userDetails: SignUpDetails): Boolean = !(LoginDetails.userList.contains(LoginDetails(userDetails.username, userDetails.password)))
+
+  def addUser(username: String, password: String): ListBuffer[LoginDetails] = LoginDetails.userList += LoginDetails(username, password)
 }

@@ -19,4 +19,12 @@ class HomeController @Inject()(cc: ControllerComponents, authAction: Authenticat
     )
   }
 
+  def redirectToLogIn: Action[AnyContent] = Action {
+    Redirect("/login")
+  }
+
+  def redirectTOSignUp: Action[AnyContent] = Action {
+    Redirect("/signup")
+  }
+
 }

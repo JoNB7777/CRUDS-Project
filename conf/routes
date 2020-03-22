@@ -3,6 +3,9 @@ GET         /                            controllers.HomeController.index
 GET         /login                       controllers.LoginController.login
 POST        /login                       controllers.LoginController.loginSubmit
 
+GET         /signup                      controllers.SignUpController.signUp
+POST        /signup                      controllers.SignUpController.signUpSubmit
+
 GET         /createperson                controllers.ApplicationUsingJsonReadersWriters.create
 
 POST        /createFromJson              controllers.ApplicationUsingJsonReadersWriters.createFromJson
@@ -10,3 +13,9 @@ POST        /createFromJson              controllers.ApplicationUsingJsonReaders
 GET         /findByName/:lastName        controllers.ApplicationUsingJsonReadersWriters.findByName(lastName: String)
 
 GET         /assets/*file                controllers.Assets.at(path="/public", file)
+
+#PUT       /updateAge                   controllers.ApplicationUsingJsonReadersWriters.updateAge
+#
+#PUT        /updateFirstName             controllers.ApplicationUsingJsonReadersWriters.updateFirstName
+#
+#PUT        /updateSurname               controllers.ApplicationUsingJsonReadersWriters.updateSurname

@@ -1,0 +1,15 @@
+@(form: Form[SignUpDetails])(implicit messagesProvider: MessagesProvider)
+
+@main("signUp") {
+
+    <div>
+    @helper.form(routes.SignUpController.signUpSubmit()) {
+        @helper.inputText(form("firstName"), '_label -> "Your first name", '_showConstraints -> false)
+        @helper.inputText(form("surname"), '_label -> "Your surname", '_showConstraints -> false)
+        @helper.inputText(form("username"), '_label -> "Your username", '_showConstraints -> false)
+        @helper.inputPassword(form("enterPassword"), '_label -> " Enter your password", '_showConstraints -> false)
+        @helper.inputPassword(form("confirmPassword"), '_label -> " Please confirm your password", '_showConstraints -> false)
+        <button type="submit">Sign Up</button>
+    }
+    </div>
+}
